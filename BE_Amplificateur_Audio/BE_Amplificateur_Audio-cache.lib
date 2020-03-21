@@ -1,6 +1,42 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# BE_Amplificateur_Audio-cache:Relay:DIPxx-1Axx-12x
+#
+DEF BE_Amplificateur_Audio-cache:Relay:DIPxx-1Axx-12x K 0 40 Y Y 1 F N
+F0 "K" 350 150 50 H V L CNN
+F1 "BE_Amplificateur_Audio-cache:Relay:DIPxx-1Axx-12x" 350 50 50 H V L CNN
+F2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" 350 -50 50 H I L CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Relay*StandexMeder*DIP*LowProfile*
+$ENDFPLIST
+DRAW
+S -400 200 300 -200 0 1 10 f
+S -325 75 -75 -75 0 1 10 N
+P 2 0 0 0 200 150 200 200 N
+P 4 0 0 0 200 150 200 100 175 125 200 150 N
+P 2 0 1 10 -300 -75 -100 75 N
+P 2 0 1 0 -200 -200 -200 -75 N
+P 2 0 1 0 -200 200 -200 75 N
+P 2 0 1 10 -75 0 -50 0 N
+P 2 0 1 10 -25 0 0 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 25 0 50 0 N
+P 2 0 1 10 75 0 100 0 N
+P 2 0 1 10 125 0 150 0 N
+P 2 0 1 20 200 -100 125 150 N
+P 2 0 1 0 200 -100 200 -200 N
+X ~ 1 200 -300 100 U 50 50 1 1 P
+X ~ 13 -200 -300 100 U 50 50 1 1 P N
+X ~ 14 200 -300 100 U 50 50 1 1 P N
+X ~ 2 -200 -300 100 U 50 50 1 1 P
+X ~ 6 -200 300 100 D 50 50 1 1 P
+X ~ 7 200 300 100 D 50 50 1 1 P
+X ~ 8 200 300 100 D 50 50 1 1 P N
+ENDDRAW
+ENDDEF
+#
 # CmpAmpliAudio:Jack_Mono
 #
 DEF CmpAmpliAudio:Jack_Mono U 0 40 Y Y 1 F N
@@ -101,6 +137,104 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device:D_Zener_ALT
+#
+DEF Device:D_Zener_ALT D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device:D_Zener_ALT" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 3 0 1 8 -50 -50 -50 50 -30 50 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Q_NPN_EBC
+#
+DEF Device:Q_NPN_EBC Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device:Q_NPN_EBC" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 225 R 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Q_PNP_BCE
+#
+DEF Device:Q_PNP_BCE Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device:Q_PNP_BCE" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
+X C 2 100 200 100 D 50 50 1 1 P
+X E 3 100 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Q_PNP_EBC
+#
+DEF Device:Q_PNP_EBC Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device:Q_PNP_EBC" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 225 R 50 50 1 1 I
+X C 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Q_PNP_ECB
+#
+DEF Device:Q_PNP_ECB Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device:Q_PNP_ECB" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X C 2 100 200 100 D 50 50 1 1 P
+X B 3 -200 0 225 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # Device:R
 #
 DEF Device:R R 0 0 N Y 1 F N
@@ -158,82 +292,16 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Diode:BZX84Cxx
+# Mechanical:Heatsink
 #
-DEF Diode:BZX84Cxx D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "Diode:BZX84Cxx" 0 -100 50 H V C CNN
-F2 "Diode_SMD:D_SOT-23_ANK" 0 -175 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- D*SOT?23*ANK*
-$ENDFPLIST
+DEF Mechanical:Heatsink HS 0 40 Y Y 1 F N
+F0 "HS" 0 200 50 H V C CNN
+F1 "Mechanical:Heatsink" 0 -50 50 H V C CNN
+F2 "" 12 0 50 H I C CNN
+F3 "" 12 0 50 H I C CNN
 DRAW
-P 2 0 1 0 50 0 -50 0 N
-P 3 0 1 8 -50 -50 -50 50 -30 50 N
-P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Relay:DIPxx-1Axx-12x
-#
-DEF Relay:DIPxx-1Axx-12x K 0 40 Y Y 1 F N
-F0 "K" 350 150 50 H V L CNN
-F1 "Relay:DIPxx-1Axx-12x" 350 50 50 H V L CNN
-F2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" 350 -50 50 H I L CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Relay*StandexMeder*DIP*LowProfile*
-$ENDFPLIST
-DRAW
-S -400 200 300 -200 0 1 10 f
-S -325 75 -75 -75 0 1 10 N
-P 2 0 0 0 200 150 200 200 N
-P 4 0 0 0 200 150 200 100 175 125 200 150 N
-P 2 0 1 10 -300 -75 -100 75 N
-P 2 0 1 0 -200 -200 -200 -75 N
-P 2 0 1 0 -200 200 -200 75 N
-P 2 0 1 10 -75 0 -50 0 N
-P 2 0 1 10 -25 0 0 0 N
-P 2 0 1 10 25 0 50 0 N
-P 2 0 1 10 25 0 50 0 N
-P 2 0 1 10 75 0 100 0 N
-P 2 0 1 10 125 0 150 0 N
-P 2 0 1 20 200 -100 125 150 N
-P 2 0 1 0 200 -100 200 -200 N
-X ~ 1 200 -300 100 U 50 50 1 1 P
-X ~ 13 -200 -300 100 U 50 50 1 1 P N
-X ~ 14 200 -300 100 U 50 50 1 1 P N
-X ~ 2 -200 -300 100 U 50 50 1 1 P
-X ~ 6 -200 300 100 D 50 50 1 1 P
-X ~ 7 200 300 100 D 50 50 1 1 P
-X ~ 8 200 300 100 D 50 50 1 1 P N
-ENDDRAW
-ENDDEF
-#
-# Transistor_BJT:BD138
-#
-DEF Transistor_BJT:BD138 Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "Transistor_BJT:BD138" 200 0 50 H V L CNN
-F2 "Package_TO_SOT_THT:TO-126-3_Vertical" 200 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-ALIAS BD136 BD138 BD234 BD236 BD238
-$FPLIST
- TO?126*
-$ENDFPLIST
-DRAW
-C 50 0 111 0 1 12 N
-P 2 0 1 0 0 0 25 0 N
-P 2 0 1 0 100 -100 25 -25 N
-P 2 0 1 0 100 100 25 25 N
-P 3 0 1 20 25 75 25 -75 25 -75 F
-P 5 0 1 0 70 -90 90 -70 50 -50 70 -90 70 -90 F
-X E 1 100 -200 100 U 50 50 1 1 P
-X C 2 100 200 100 D 50 50 1 1 P
-X B 3 -200 0 200 R 50 50 1 1 I
+P 10 0 1 10 -13 50 -38 50 -38 150 -63 150 -63 50 -88 50 -88 150 -113 150 -113 0 -38 0 f
+P 13 0 1 10 -13 50 -13 150 12 150 12 50 37 50 37 150 62 150 62 50 87 50 87 150 112 150 112 0 -38 0 f
 ENDDRAW
 ENDDEF
 #
@@ -258,96 +326,6 @@ P 5 0 1 0 49 -70 69 -50 90 -90 49 -70 49 -70 F
 X E 1 100 -200 100 U 50 50 1 1 P
 X C 2 100 200 100 D 50 50 1 1 P
 X B 3 -200 0 200 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# dk_Transistors-Bipolar-BJT-Single:2N2222A
-#
-DEF dk_Transistors-Bipolar-BJT-Single:2N2222A Q 0 0 Y Y 1 F N
-F0 "Q" -126 166 60 H V L CNN
-F1 "dk_Transistors-Bipolar-BJT-Single:2N2222A" 206 0 60 V V C CNN
-F2 "digikey-footprints:TO-18-3" 200 200 60 H I L CNN
-F3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" 200 300 60 H I L CNN
-F4 "2N2222ACS-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "2N2222A" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2221A.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/central-semiconductor-corp/2N2222A/2N2222ACS-ND/4806845" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS NPN 40V 0.8A TO-18" 200 1000 60 H I L CNN "Description"
-F11 "Central Semiconductor Corp" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 128 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
-X E 1 100 -200 100 U 50 50 1 1 P
-X B 2 -200 0 100 R 50 50 1 1 I
-X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# dk_Transistors-Bipolar-BJT-Single:2N2907A
-#
-DEF dk_Transistors-Bipolar-BJT-Single:2N2907A Q 0 0 Y Y 1 F N
-F0 "Q" -94 154 60 H V C CNN
-F1 "dk_Transistors-Bipolar-BJT-Single:2N2907A" 200 0 60 V V C CNN
-F2 "digikey-footprints:TO-18-3" 200 200 60 H I L CNN
-F3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2906.PDF" 200 300 60 H I L CNN
-F4 "2N2907ACS-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "2N2907A" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2906.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/central-semiconductor-corp/2N2907A/2N2907ACS-ND/4806853" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS PNP 60V 0.6A TO-18" 200 1000 60 H I L CNN "Description"
-F11 "Central Semiconductor Corp" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 118 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 40 100 20 60 60 50 40 100 F
-X E 1 100 200 100 D 50 50 1 1 P
-X B 2 -200 0 100 R 50 50 1 1 I
-X C 3 100 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# dk_Transistors-Bipolar-BJT-Single:TIP30C_Obsolete
-#
-DEF dk_Transistors-Bipolar-BJT-Single:TIP30C_Obsolete Q 0 0 Y Y 1 F N
-F0 "Q" -94 154 60 H V C CNN
-F1 "dk_Transistors-Bipolar-BJT-Single:TIP30C_Obsolete" 200 0 60 V V C CNN
-F2 "digikey-footprints:TO-220-3" 200 200 60 H I L CNN
-F3 "https://www.fairchildsemi.com/datasheets/TI/TIP30C.pdf" 200 300 60 H I L CNN
-F4 "TIP30C-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "TIP30C" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "https://www.fairchildsemi.com/datasheets/TI/TIP30C.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/on-semiconductor/TIP30C/TIP30C-ND/1052081" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS PNP 100V 1A TO-220" 200 1000 60 H I L CNN "Description"
-F11 "ON Semiconductor" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Obsolete NonStock" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 118 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 40 100 20 60 60 50 40 100 F
-X B 1 -200 0 100 R 50 50 1 1 I
-X C 2 100 -200 100 U 50 50 1 1 P
-X E 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
