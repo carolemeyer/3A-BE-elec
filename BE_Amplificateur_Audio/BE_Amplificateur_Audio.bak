@@ -1134,7 +1134,7 @@ U 1 1 5E76D2F3
 P 8100 4150
 F 0 "U1" V 8567 4150 50  0000 C CNN
 F 1 "Relay_1CT" V 8476 4150 50  0000 C CNN
-F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 8450 4100 50  0001 L CNN
+F 2 "Be-Elec:RelayBE" H 8450 4100 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 8100 4150 50  0001 C CNN
 	1    8100 4150
 	0    -1   -1   0   
