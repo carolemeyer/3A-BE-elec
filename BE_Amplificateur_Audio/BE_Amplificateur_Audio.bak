@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "BE_Ampli_Audio"
+Date "2020-04-04"
+Rev "V0"
+Comp "INSA GEI"
+Comment1 "Carole Meyer"
+Comment2 "Louis Nouguerede"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -342,17 +342,6 @@ Connection ~ 3500 5450
 Wire Wire Line
 	3500 5450 2600 5450
 $Comp
-L power:-12V #PWR0106
-U 1 1 5E6A0A5F
-P 3500 5550
-F 0 "#PWR0106" H 3500 5650 50  0001 C CNN
-F 1 "-12V" H 3515 5723 50  0000 C CNN
-F 2 "" H 3500 5550 50  0001 C CNN
-F 3 "" H 3500 5550 50  0001 C CNN
-	1    3500 5550
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R15
 U 1 1 5E6A0EC1
 P 3350 6050
@@ -427,7 +416,7 @@ U 1 1 5E6A7639
 P 6300 2750
 F 0 "C9" H 6185 2704 50  0000 R CNN
 F 1 "100n" H 6185 2795 50  0000 R CNN
-F 2 "Be-Elec:CP_Radial_D12.5mm_P5.00mm" H 6338 2600 50  0001 C CNN
+F 2 "Be-Elec:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6338 2600 50  0001 C CNN
 F 3 "~" H 6300 2750 50  0001 C CNN
 	1    6300 2750
 	-1   0    0    1   
@@ -464,17 +453,6 @@ Wire Wire Line
 Connection ~ 6500 3050
 Wire Wire Line
 	6500 3050 6650 3050
-$Comp
-L power:GND #PWR0108
-U 1 1 5E6AC547
-P 6500 3150
-F 0 "#PWR0108" H 6500 2900 50  0001 C CNN
-F 1 "GND" H 6505 2977 50  0000 C CNN
-F 2 "" H 6500 3150 50  0001 C CNN
-F 3 "" H 6500 3150 50  0001 C CNN
-	1    6500 3150
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R11
 U 1 1 5E6AC58E
@@ -525,7 +503,7 @@ U 1 1 5E6BAD51
 P 6250 5100
 F 0 "C11" H 6135 5054 50  0000 R CNN
 F 1 "100n" H 6135 5145 50  0000 R CNN
-F 2 "Be-Elec:CP_Radial_D12.5mm_P5.00mm" H 6288 4950 50  0001 C CNN
+F 2 "Be-Elec:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6288 4950 50  0001 C CNN
 F 3 "~" H 6250 5100 50  0001 C CNN
 	1    6250 5100
 	-1   0    0    1   
@@ -623,17 +601,6 @@ Wire Wire Line
 Wire Wire Line
 	7400 4850 7400 4600
 $Comp
-L power:GND #PWR0111
-U 1 1 5E6CF8CD
-P 8200 5550
-F 0 "#PWR0111" H 8200 5300 50  0001 C CNN
-F 1 "GND" H 8205 5377 50  0000 C CNN
-F 2 "" H 8200 5550 50  0001 C CNN
-F 3 "" H 8200 5550 50  0001 C CNN
-	1    8200 5550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R17
 U 1 1 5E6CF926
 P 8200 5300
@@ -680,28 +647,6 @@ Wire Wire Line
 	8550 5450 8550 5550
 Wire Wire Line
 	7750 5250 7750 5550
-$Comp
-L power:GND #PWR0112
-U 1 1 5E6E541F
-P 7750 5550
-F 0 "#PWR0112" H 7750 5300 50  0001 C CNN
-F 1 "GND" H 7755 5377 50  0000 C CNN
-F 2 "" H 7750 5550 50  0001 C CNN
-F 3 "" H 7750 5550 50  0001 C CNN
-	1    7750 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-12V #PWR0113
-U 1 1 5E6E5F28
-P 8550 5550
-F 0 "#PWR0113" H 8550 5650 50  0001 C CNN
-F 1 "-12V" H 8565 5723 50  0000 C CNN
-F 2 "" H 8550 5550 50  0001 C CNN
-F 3 "" H 8550 5550 50  0001 C CNN
-	1    8550 5550
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8550 4900 8550 5050
 $Comp
@@ -746,13 +691,13 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5E6ED34F
-P 9200 3950
-F 0 "J2" H 9280 3942 50  0000 L CNN
-F 1 "Conn_01x02" H 9280 3851 50  0000 L CNN
-F 2 "Be-Elec:PhoenixContact_MSTBVA_2,5_2-G-5,08_1x02_P5.08mm_Vertical" H 9200 3950 50  0001 C CNN
-F 3 "~" H 9200 3950 50  0001 C CNN
-	1    9200 3950
-	1    0    0    -1  
+P 9200 4050
+F 0 "J2" H 9280 4042 50  0000 L CNN
+F 1 "Conn_01x02" H 9280 3951 50  0000 L CNN
+F 2 "Be-Elec:PhoenixContact_MSTBVA_2,5_2-G-5,08_1x02_P5.08mm_Vertical" H 9200 4050 50  0001 C CNN
+F 3 "~" H 9200 4050 50  0001 C CNN
+	1    9200 4050
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	9000 3950 8400 3950
@@ -788,7 +733,7 @@ U 1 1 5E6FE989
 P 1600 6650
 F 0 "C5" H 1715 6696 50  0000 L CNN
 F 1 "100n" H 1715 6605 50  0000 L CNN
-F 2 "Be-Elec:CP_Radial_D12.5mm_P5.00mm" H 1638 6500 50  0001 C CNN
+F 2 "Be-Elec:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 1638 6500 50  0001 C CNN
 F 3 "~" H 1600 6650 50  0001 C CNN
 	1    1600 6650
 	1    0    0    -1  
@@ -799,7 +744,7 @@ U 1 1 5E6FEB15
 P 1600 7250
 F 0 "C7" H 1715 7296 50  0000 L CNN
 F 1 "100n" H 1715 7205 50  0000 L CNN
-F 2 "Be-Elec:CP_Radial_D12.5mm_P5.00mm" H 1638 7100 50  0001 C CNN
+F 2 "Be-Elec:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 1638 7100 50  0001 C CNN
 F 3 "~" H 1600 7250 50  0001 C CNN
 	1    1600 7250
 	1    0    0    -1  
@@ -873,28 +818,6 @@ Wire Wire Line
 Connection ~ 1600 7500
 Wire Wire Line
 	1300 7500 1300 7550
-$Comp
-L power:-12V #PWR0116
-U 1 1 5E72BE2B
-P 1300 7550
-F 0 "#PWR0116" H 1300 7650 50  0001 C CNN
-F 1 "-12V" H 1315 7723 50  0000 C CNN
-F 2 "" H 1300 7550 50  0001 C CNN
-F 3 "" H 1300 7550 50  0001 C CNN
-	1    1300 7550
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR0117
-U 1 1 5E72C67E
-P 1300 6350
-F 0 "#PWR0117" H 1300 6200 50  0001 C CNN
-F 1 "+12V" H 1315 6523 50  0000 C CNN
-F 2 "" H 1300 6350 50  0001 C CNN
-F 3 "" H 1300 6350 50  0001 C CNN
-	1    1300 6350
-	1    0    0    -1  
-$EndComp
 Connection ~ 1300 7500
 Wire Wire Line
 	1100 7050 1300 7050
@@ -1129,14 +1052,91 @@ Wire Wire Line
 Wire Wire Line
 	6650 4600 6650 4650
 $Comp
-L Relay:DIPxx-1Axx-12x U1
-U 1 1 5E76D2F3
+L BE_Amplificateur_Audio-cache:power:GND #PWR0108
+U 1 1 5E9CF6CB
+P 6500 3150
+F 0 "#PWR0108" H 6500 2900 50  0001 C CNN
+F 1 "power:GND" H 6505 2977 50  0000 C CNN
+F 2 "" H 6500 3150 50  0001 C CNN
+F 3 "" H 6500 3150 50  0001 C CNN
+	1    6500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:-12V #PWR0106
+U 1 1 5E9CFDE6
+P 3500 5550
+F 0 "#PWR0106" H 3500 5650 50  0001 C CNN
+F 1 "power:-12V" H 3515 5723 50  0000 C CNN
+F 2 "" H 3500 5550 50  0001 C CNN
+F 3 "" H 3500 5550 50  0001 C CNN
+	1    3500 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:-12V #PWR0116
+U 1 1 5E9D063D
+P 1300 7550
+F 0 "#PWR0116" H 1300 7650 50  0001 C CNN
+F 1 "power:-12V" H 1315 7723 50  0000 C CNN
+F 2 "" H 1300 7550 50  0001 C CNN
+F 3 "" H 1300 7550 50  0001 C CNN
+	1    1300 7550
+	-1   0    0    1   
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:+12V #PWR0117
+U 1 1 5E9D073D
+P 1300 6350
+F 0 "#PWR0117" H 1300 6200 50  0001 C CNN
+F 1 "power:+12V" H 1315 6523 50  0000 C CNN
+F 2 "" H 1300 6350 50  0001 C CNN
+F 3 "" H 1300 6350 50  0001 C CNN
+	1    1300 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:GND #PWR0111
+U 1 1 5E9D0D46
+P 7750 5550
+F 0 "#PWR0111" H 7750 5300 50  0001 C CNN
+F 1 "power:GND" H 7755 5377 50  0000 C CNN
+F 2 "" H 7750 5550 50  0001 C CNN
+F 3 "" H 7750 5550 50  0001 C CNN
+	1    7750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:GND #PWR0112
+U 1 1 5E9D0DC0
+P 8200 5550
+F 0 "#PWR0112" H 8200 5300 50  0001 C CNN
+F 1 "power:GND" H 8205 5377 50  0000 C CNN
+F 2 "" H 8200 5550 50  0001 C CNN
+F 3 "" H 8200 5550 50  0001 C CNN
+	1    8200 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L BE_Amplificateur_Audio-cache:power:-12V #PWR0113
+U 1 1 5E9D1075
+P 8550 5550
+F 0 "#PWR0113" H 8550 5650 50  0001 C CNN
+F 1 "power:-12V" H 8565 5723 50  0000 C CNN
+F 2 "" H 8550 5550 50  0001 C CNN
+F 3 "" H 8550 5550 50  0001 C CNN
+	1    8550 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_modif_sch:DIPxx-1Axx-12x U1
+U 1 1 5E9F9105
 P 8100 4150
 F 0 "U1" V 8567 4150 50  0000 C CNN
 F 1 "Relay_1CT" V 8476 4150 50  0000 C CNN
 F 2 "Be-Elec:RelayBE" H 8450 4100 50  0001 L CNN
 F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 8100 4150 50  0001 C CNN
 	1    8100 4150
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $EndSCHEMATC

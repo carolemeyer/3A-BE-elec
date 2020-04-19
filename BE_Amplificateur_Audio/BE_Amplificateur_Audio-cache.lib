@@ -1,6 +1,47 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# BE_Amplificateur_Audio-cache:power:+12V
+#
+DEF BE_Amplificateur_Audio-cache:power:+12V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "BE_Amplificateur_Audio-cache:power:+12V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# BE_Amplificateur_Audio-cache:power:-12V
+#
+DEF BE_Amplificateur_Audio-cache:power:-12V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 100 50 H I C CNN
+F1 "BE_Amplificateur_Audio-cache:power:-12V" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 30 50 0 100 -30 50 0 50 F
+X -12V 1 0 0 0 U 50 50 0 0 W N
+ENDDRAW
+ENDDEF
+#
+# BE_Amplificateur_Audio-cache:power:GND
+#
+DEF BE_Amplificateur_Audio-cache:power:GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "BE_Amplificateur_Audio-cache:power:GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
 # CmpAmpliAudio:Jack_Mono
 #
 DEF CmpAmpliAudio:Jack_Mono U 0 40 Y Y 1 F N
@@ -269,11 +310,11 @@ P 13 0 1 10 -13 50 -13 150 12 150 12 50 37 50 37 150 62 150 62 50 87 50 87 150 1
 ENDDRAW
 ENDDEF
 #
-# Relay:DIPxx-1Axx-12x
+# Relay_modif_sch:DIPxx-1Axx-12x
 #
-DEF Relay:DIPxx-1Axx-12x K 0 40 Y Y 1 F N
+DEF Relay_modif_sch:DIPxx-1Axx-12x K 0 40 Y Y 1 F N
 F0 "K" 350 150 50 H V L CNN
-F1 "Relay:DIPxx-1Axx-12x" 350 50 50 H V L CNN
+F1 "Relay_modif_sch:DIPxx-1Axx-12x" 350 50 50 H V L CNN
 F2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" 350 -50 50 H I L CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -296,12 +337,9 @@ P 2 0 1 10 125 0 150 0 N
 P 2 0 1 20 200 -100 125 150 N
 P 2 0 1 0 200 -100 200 -200 N
 X ~ 1 200 -300 100 U 50 50 1 1 P
-X ~ 13 -200 -300 100 U 50 50 1 1 P N
-X ~ 14 200 -300 100 U 50 50 1 1 P N
 X ~ 2 -200 -300 100 U 50 50 1 1 P
 X ~ 6 -200 300 100 D 50 50 1 1 P
 X ~ 7 200 300 100 D 50 50 1 1 P
-X ~ 8 200 300 100 D 50 50 1 1 P N
 ENDDRAW
 ENDDEF
 #
@@ -341,19 +379,6 @@ P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
 P 2 0 1 0 0 100 30 50 N
 X +12V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:-12V
-#
-DEF power:-12V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 100 50 H I C CNN
-F1 "power:-12V" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 50 30 50 0 100 -30 50 0 50 F
-X -12V 1 0 0 0 U 50 50 0 0 W N
 ENDDRAW
 ENDDEF
 #
