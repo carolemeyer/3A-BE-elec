@@ -1,0 +1,54 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Jack_Mono-CmpAmpliAudio
+#
+DEF Jack_Mono-CmpAmpliAudio U 0 40 Y Y 1 F N
+F0 "U" 50 200 50 H V C CNN
+F1 "Jack_Mono-CmpAmpliAudio" 50 -350 50 H V C CNN
+F2 "" 50 200 50 H I C CNN
+F3 "" 50 200 50 H I C CNN
+DRAW
+S -100 -150 -150 -50 1 1 10 F
+S 100 100 -100 -150 1 1 10 f
+P 3 0 1 0 100 0 0 0 0 -100 N
+P 4 0 1 0 0 -95 15 -70 -15 -70 0 -95 F
+P 4 0 1 0 100 -100 -25 -100 -50 -75 -75 -100 N
+X ~ G -100 -250 100 U 50 50 1 1 P
+X ~ T 200 -100 100 L 50 50 1 1 P
+X ~ TN 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Relay_1CT-relait_1CT
+#
+DEF Relay_1CT-relait_1CT U 0 20 Y Y 1 F N
+F0 "U" -150 350 50 V V L CNN
+F1 "Relay_1CT-relait_1CT" -50 350 50 V V L CNN
+F2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" 50 350 50 V I L CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ Relay*StandexMeder*DIP*LowProfile*
+$ENDFPLIST
+DRAW
+S -200 -400 200 300 0 1 10 f
+S -75 -325 75 -75 0 1 10 N
+P 4 0 0 0 -200 200 -100 200 -125 175 -150 200 N
+P 2 0 1 0 -200 -200 -75 -200 N
+P 2 0 1 10 0 -75 0 -50 N
+P 2 0 1 10 0 -25 0 0 N
+P 2 0 1 10 0 25 0 50 N
+P 2 0 1 10 0 75 0 100 N
+P 2 0 1 10 0 125 0 150 N
+P 2 0 1 10 75 -300 -75 -100 N
+P 2 0 1 20 100 200 -150 125 N
+P 2 0 1 0 100 200 200 200 N
+P 2 0 1 0 200 -200 75 -200 N
+X ~ C1 -300 200 100 R 50 50 1 1 P
+X ~ b1 -300 -200 100 R 50 50 1 1 P
+X ~ b2 300 -200 100 L 50 50 1 1 P
+X ~ c2 300 200 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
